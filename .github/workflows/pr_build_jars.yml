@@ -29,3 +29,8 @@ jobs:
       run: "chmod +x gradlew"
     - name: "Build jar with Java ${{ matrix.java-version }}"
       run: "./gradlew shadowJar"
+    - name: papi
+      uses: actions/upload-artifact@v3
+      with:
+        name: Papi
+        path: ./*
